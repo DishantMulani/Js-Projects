@@ -1,0 +1,193 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="Clock.css">
+    <script src="Clock.js"></script>
+    <style>
+        body {
+            background: rgb(32, 32, 32);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .im {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 530px;
+            width: 530px;
+            background-color: rgb(32, 32, 32);
+            border-radius: 50%;
+            border: 1px solid;
+        }
+
+        .image {
+            position: relative;
+            height: 500px;
+            width: 500px;
+            background-color: rgb(32, 32, 32);
+            border-radius: 50%;
+            box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0px -15px 15px rgba(255, 255, 255, 0.05),
+                0px 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0px 15px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .image:after {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            left: 48.3%;
+            top: 48%;
+            background-color: gray;
+            z-index: 1;
+        }
+
+
+        .hour {
+            position: absolute;
+            height: 20%;
+            width: 2%;
+            left: 49.2%;
+            top: 30%;
+            border-radius: 15px;
+            background-color: orange;
+            transform-origin: 50% bottom;
+            opacity: 1;
+        }
+
+        .minute {
+            position: absolute;
+            height: 40%;
+            width: 1.4%;
+            left: 49.5%;
+            top: 10%;
+            border-radius: 15px;
+            background-color: gray;
+            transform-origin: 50% bottom;
+            opacity: 0.7;
+        }
+
+        .second {
+            position: absolute;
+            height: 30%;
+            width: 0.8%;
+            left: 49.7%;
+            top: 20%;
+            border-radius: 15px;
+            background-color: gray;
+            transform-origin: 50% bottom;
+            opacity: 0.7;
+        }
+
+        .num {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .num::after {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 2px;
+            background-color: red;
+            left: 50%;
+            top: 0
+        }
+
+        .image .num:nth-child(1) {
+            transform: rotate(30deg);
+        }
+
+        .image .num:nth-child(2) {
+            transform: rotate(60deg);
+        }
+
+        .image .num:nth-child(3) {
+            transform: rotate(90deg);
+        }
+
+        .image .num:nth-child(4) {
+            transform: rotate(120deg);
+        }
+
+        .image .num:nth-child(5) {
+            transform: rotate(150deg);
+        }
+
+        .image .num:nth-child(6) {
+            transform: rotate(180deg);
+        }
+
+        .image .num:nth-child(7) {
+            transform: rotate(210deg);
+        }
+
+        .image .num:nth-child(8) {
+            transform: rotate(240deg);
+        }
+
+        .image .num:nth-child(9) {
+            transform: rotate(270deg);
+        }
+
+        .image .num:nth-child(10) {
+            transform: rotate(300deg);
+        }
+
+        .image .num:nth-child(11) {
+            transform: rotate(330deg);
+        }
+
+        .image .num:nth-child(12) {
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="im">
+            <div class="image">
+                <div class="num text-info">1</div>
+                <div class="num text-info">2</div>
+                <div class="num text-info">3</div>
+                <div class="num text-info">4</div>
+                <div class="num text-info">5</div>
+                <div class="num text-info">6</div>
+                <div class="num text-info">7</div>
+                <div class="num text-info">8</div>
+                <div class="num text-info">9</div>
+                <div class="num text-info">10</div>
+                <div class="num text-info">11</div>
+                <div class="num text-info">12</div>
+                <div class="hour" id="hour"></div>
+                <div class="minute" id="minute"></div>
+                <div class="second" id="second"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
