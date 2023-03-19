@@ -10,7 +10,7 @@ $(document).ready(() => {
     const milliSecond = $(".milliSecond");
     $(".btn1").click(() => {
         // console.log("hii");
-        Interval = setInterval(function () {
+        Interval = setInterval(() => {
             MilliSecond++;
             if (MilliSecond <= 9) {
                 // console.log("MilliSecond");
